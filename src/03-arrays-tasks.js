@@ -401,8 +401,9 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-function getItemsSum(/* arr */) {
-  throw new Error('Not implemented');
+function getItemsSum(arr) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return arr.reduce(reducer, 0);
 }
 
 /**
