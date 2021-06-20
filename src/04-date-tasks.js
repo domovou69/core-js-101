@@ -77,6 +77,21 @@ function isLeapYear(date) {
  */
 function timeSpanToString(/* startDate, endDate */) {
   throw new Error('Not implemented');
+  // const a = Date(endDate - startDate);
+  // return a;
+  // let hh = a.getDate();
+  // if (hh < 24) hh = '0' + hh;
+
+  // let mm = a.getDate();
+  // if (mm < 60) mm = '0' + mm;
+
+  // let ss = a.getDate();
+  // if (ss < 60) ss = '0' + ss;
+
+  // let sss = a.getDate();
+  // if (sss < 1000) sss = '0' + sss;
+
+  // return hh + ':' + mm + ':' + ss + '.' + sss;
 }
 
 
