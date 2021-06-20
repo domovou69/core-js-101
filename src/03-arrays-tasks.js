@@ -418,8 +418,30 @@ function getItemsSum(arr) {
  *  [ -1, 'false', null, 0 ] => 2
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
-function getFalsyValuesCount(/* arr */) {
-  throw new Error('Not implemented');
+function getFalsyValuesCount(arr) {
+  const checkFalsyValues = function falsyValues(value) {
+    if (typeof value === 'boolean' && !value) {
+      return true;
+    }
+    if (value === null) {
+      return true;
+    }
+    if (value === undefined) {
+      return true;
+    }
+    if (value === 0) {
+      return true;
+    }
+    if (Number.isNaN(value)) {
+      return true;
+    }
+    if (typeof value === 'string' && value.length === 0) {
+      return true;
+    }
+    return false;
+  };
+
+  return arr.filter(checkFalsyValues).length;
 }
 
 /**
